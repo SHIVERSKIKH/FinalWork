@@ -1,0 +1,109 @@
+@import "../css/hover.css";
+@import "../css/normalize.css";
+@import "../css/nulling-styles.css";
+@import "_variables.scss";
+@import "_main.scss";
+
+body {
+    font-family: "Jost", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: rgb(223, 223, 223);
+    background: #020204;
+  }
+  .center {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  .header {
+    padding: 6px 18px;
+    &__info-wrp {
+      height: 28px;
+      border-bottom: 1px solid #32323d;;
+    }
+    &__info {
+      max-width: 1200px;
+      width: 100%;
+      @include flexSpaceBetween;
+    }
+    &__info-lang {
+      max-width: 50px;
+      width: 100%;
+      @include flexSpaceBetween;
+    }
+    &__info-lang_txt {
+        font-weight: 600;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    &__info-tel {
+      a {
+        font-weight: 600;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #fff;
+      }
+    }
+  }
+  .nav {
+    border-bottom: 1px solid #32323d;;
+    &__wrp {
+      padding: 36px 20px;
+      @include flexSpaceBetween;
+    }
+    &__menu {
+      max-width: 347px;
+      width: 100%;
+    }
+    &__menu-list {
+      width: 347px;
+      @include flexSpaceBetween;
+    }
+    &__menu-link {
+      font-weight: 600;
+      font-size: 15px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    &__logo {
+      width: 58px;
+      height: 55px;
+    }
+    &__logo-img {
+      width: 58px;
+      height: 55px;
+      background: url(../../img/coffee\ logo.png);
+      @include backgroundCenterContain;
+      display: block;
+    }
+    &__user {
+      max-width: 134px;
+      width: 100%;
+    }
+    &__user-list {
+      max-width: 134px;
+      width: 100%;
+      @include flexSpaceBetween;
+    }
+    &__user-item {
+      a {
+        display: block;
+        width: 25px;
+        height: 25px;
+        @include backgroundCenterContain;
+      }
+    }
+    &__user-us {
+      background: url(../../img/user\ 1.png);
+    }
+    &__user-favor {
+      background: url(../../img/favorite\ 1.png);
+    }
+    &__user-cart {
+      background: url(../../img/cart\ 1.png);
+    }
+  }
