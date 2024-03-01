@@ -3,6 +3,8 @@
 @import "../css/nulling-styles.css";
 @import "_variables.scss";
 @import "_main.scss";
+@import "_projectDetails.scss";
+@import "_cart.scss";
 
 body {
     font-family: "Jost", sans-serif;
@@ -12,7 +14,7 @@ body {
     background: #020204;
   }
   .center {
-    max-width: 1200px;
+    max-width: 1240px;
     width: 100%;
     padding: 0 20px;
     box-sizing: border-box;
@@ -101,9 +103,21 @@ body {
       background: url(../../img/user\ 1.png);
     }
     &__user-favor {
-      background: url(../../img/favorite\ 1.png);
+      background: url(../../img/favorite1.png);
     }
     &__user-cart {
       background: url(../../img/cart\ 1.png);
     }
+  }
+  .active-menu {
+    color:#C7A17A;
+  }
+  .not__title {
+    text-align: center;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 144%;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 32px 0;
   }

@@ -1,47 +1,260 @@
 .promo {
-    padding: 199px 0;
-    background: url(@/assets/img/promo-img.jpg);
+  padding: 199px 0;
+  background: url(@/assets/img/promo-img.jpg);
+  @include backgroundCenterCover;
+  &__info {
+    max-width: 571px;
+    width: 100%;
+  }
+  &__title {
+    max-width: 571px;
+    width: 100%;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 144%;
+    text-transform: uppercase;
+    margin: 0 0 35px 0;
+  }
+  &__txt {
+    max-width: 535px;
+    width: 100%;
+    font-size: 18px;
+    color: #dfdfdf;
+    margin: 0 0 35px 0;
+  }
+  &__btn {
+    max-width: 420px;
+    width: 100%;
+    @include flexSpaceBetween;
+  }
+  &__btn-link {
+    max-width: 200px;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background: rgb(199, 161, 122);
+    @include flexCenter;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  &__btn-link--color {
+    background: transparent;
+    border: 1px solid rgb(102, 102, 129);
+  }
+}
+.main {
+  padding: 100px 80px;
+}
+.article {
+  max-width: 1200px;
+  width: 100%;
+  max-height: 330px;
+  display: flex;
+  border-radius: 10px;
+  background: #14141d;
+  &__img-wrp {
+    max-width: 600px;
+    width: 100%;
+    img {
+      max-width: 600px;
+      width: 100%;
+      height: 100%;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+  }
+  &__info {
+    max-width: 600px;
+    width: 100%;
+    padding: 30px 42px;
+  }
+  &__title {
+    max-width: 223px;
+    width: 100%;
+    font-weight: 900;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 0 0 15px 0;
+  }
+  &__txt {
+    max-width: 498px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 26px;
+    color: #dfdfdf;
+  }
+}
+.catalog {
+  padding: 80px 0 80px;
+  &__title {
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 144%;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 40px 0;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 21px;
+  }
+  &__item {
+    padding: 20px 20px;
+    max-width: 386px;
+    width: 100%;
+    max-height: 372px;
+    border-radius: 10px;
+    background: rgb(20, 20, 29);
+  }
+  &__item:nth-child(2) {
+    background: #22222F;
+  }
+  &__item-link {
+    display: flex;
+    flex-direction: column;
+  }
+  &__img-wrp {
+    max-width: 97px;
+    width: 100%;
+    margin: 0 0 42px 0;
+    align-self: center;
+    img {
+      max-width: 97px;
+      width: 100%;
+      height: 199px;
+    }
+  }
+  &__subtitle {
+    font-weight: 900;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 30px 0;
+  }
+  &__container {
+    max-width: 346px;
+    width: 100%;
+    display: flex;
+    @include flexSpaceBetween;
+  }
+  &__price {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    span {
+      font-size: 18px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-decoration: line-through;
+      color: #818181;
+      padding-left: 29px;
+    }
+  }
+  &__favorite {
+    display: block;
+    width: 27px;
+    height: 24px;
+    background: url(../../img/favorite1.png);
     @include backgroundCenterCover;
-    &__info {
-        max-width: 571px;
-        width: 100%;
+  }
+}
+.news {
+  &__title {
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 144%;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 40px 0;
+  }
+  &__info {
+    max-width: 1200px;
+    width: 100%;
+    max-height: 465px;
+    display: flex;
+    gap: 21px;
+    flex-wrap: wrap;
+  }
+  &__article {
+    max-width: 386px;
+    width: 100%;
+    height: 465px;
+    background: #14141d;
+    border-radius: 10px;
+  }
+  &__article-img {
+    max-width: 386px;
+    width: 100%;
+    img {
+      max-width: 386px;
+      width: 100%;
+      height: 239px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
     }
-    &__title {
-        max-width: 571px;
-        width: 100%;
-        font-weight: 900;
-        font-size: 60px;
-        line-height: 144%;
-        text-transform: uppercase;
-        margin: 0 0 35px 0;
-    }
-    &__txt {
-        max-width: 535px;
-        width: 100%;
-        font-size: 18px;
-        color: #dfdfdf;
-        margin: 0 0 35px 0;
-    }
-    &__btn {
-        max-width: 420px;
-        width: 100%;
-        @include flexSpaceBetween;
-    }
-    &__btn-link {
-        max-width: 200px;
-        width: 100%;
-        height: 50px;
-        border-radius: 10px;
-        background: rgb(199, 161, 122);
-        @include flexCenter;
-        font-weight: 500;
-        font-size: 15px;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: #fff;
-    }
-    &__btn-link--color {
-        background: transparent;
-        border: 1px solid rgb(102, 102, 129);
-    }
+  }
+  &__article-wrp {
+    padding: 20px 21px 43px 21px;
+  }
+  &__article-wrp:nth-child(2) {
+    padding: 20px;
+  }
+  &__article-title {
+    font-weight: 900;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 13px 0;
+  }
+  &__article-txt {
+    max-width: 344px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    color: #dfdfdf;
+  }
+}
+.footer {
+  padding: 79px 0 81px 0;
+  border-top: 1px solid rgb(20, 20, 29);
+  &__wrp {
+    max-width: 938px;
+    width: 100%;
+    @include flexSpaceBetween;
+  }
+  &__logo {
+    align-self: flex-start;
+    width: 186px;
+    height: 79px;
+  }
+  &__menu-list {
+    max-width: 103px;
+    width: 100%;
+    height: 130px;
+    @include flexSpaceBetween;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  &__menu-link {
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  &__contacts {
+    align-self: flex-start;
+  }
+  &__contacts-list {
+    max-width: 124px;
+    width: 100%;
+    height: 55px;
+    @include flexSpaceBetween;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: flex-start;
+  }
 }
