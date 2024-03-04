@@ -15,6 +15,7 @@
     width: 100%;
     @include flexSpaceBetween;
     margin: 0 0 80px 0;
+    gap: 20px;
   }
   &__image-wrp {
     padding: 60px 293px 60px;
@@ -128,4 +129,32 @@
     text-transform: uppercase;
     color: #fff;
     @include flexCenter;
+}
+@media(max-width:1000px) {
+  .projectDetails__image-wrp {
+    padding: 48px 219px 60px;
+  }
+}
+@media(max-width:850px) {
+  .projectDetails__image-wrp {
+    padding: 48px 182px 60px;
+}
+}
+@media(max-width:726px) {
+  .projectDetails {
+    &__title {
+      font-size: 45px;
+    }
+    &__info {
+      flex-direction: column;
+    }
+    &__image-wrp {
+      padding: 48px 150px 60px;
+    }
+  }
+}
+@media(max-width:426px) {
+  .projectDetails__image-wrp {
+    padding: 48px 82px 60px;
+}
 }
