@@ -4,12 +4,12 @@
                             <div class="catalog__img-wrp">
                                 <img :src="product.img" alt="" class="catalog__img">
                             </div>
+                        </routerLink>
                             <h3 class="catalog__subtitle">{{ product.name }}</h3>
                             <div class="catalog__container">
                                 <p class="catalog__price">${{ product.price }} <span>{{ product.sale }}</span></p>
                                 <span class="catalog__favorite" @click="toggleFavorite" :style="{ background: favoriteBackground }"></span>
                         </div>
-                    </routerLink>
                     </div>
 </template>
 

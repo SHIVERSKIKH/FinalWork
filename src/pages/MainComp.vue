@@ -6,8 +6,8 @@
                 <h1 class="promo__title">{{ $t('promoTitle') }}</h1>
                 <p class="promo__txt">{{ $t('promoTxt') }}</p>
                 <div class="promo__btn">
-                    <router-link class="promo__btn-link" to="/">Buy now</router-link>
-                    <router-link class="promo__btn-link promo__btn-link--color" to="/productDetails">Read more</router-link>
+                    <router-link class="promo__btn-link" to="/">{{ $t('buyBtn') }}</router-link>
+                    <router-link class="promo__btn-link promo__btn-link--color" to="/productDetails">{{ $t('readBtn') }}</router-link>
                 </div>
             </div>
         </div>
