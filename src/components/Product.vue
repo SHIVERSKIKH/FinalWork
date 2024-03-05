@@ -17,10 +17,11 @@
     export default {
         props: {
             product:Object,
-        },
+    },
         data() {
         return {
             isFavorite: false,
+            favoriteCount:0,
         };
     },
     computed: {
@@ -31,6 +32,7 @@
     methods: {
         toggleFavorite() {
             this.isFavorite = !this.isFavorite;
+            this.favoriteCount += this.isFavorite ? 1 : -1;
         }
     }
     }

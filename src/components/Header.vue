@@ -35,7 +35,7 @@
                   <router-link class="nav__user-us" to="/"></router-link>
                 </li>
                 <li class="nav__user-item">
-                  <router-link class="nav__user-favor" to="/"></router-link>
+                  <router-link class="nav__user-favor" to="/"><span class="favorite-span" ></span></router-link>
                 </li>
                 <li class="nav__user-item">
                   <router-link class="nav__user-cart" to="/"></router-link>
@@ -89,6 +89,7 @@
   <script>
   import { mapState, mapMutations } from 'vuex';
   import i18n from '@/i18n';
+
   
   export default {
     i18n,

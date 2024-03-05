@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Product v-for="product in products" :key="product.id" :product="product"/>
+        <Product v-for="product in filteredItems" :key="product.id" :product="product"/>
     </div>
 </template>
 
@@ -52,6 +52,17 @@ export default {
                     sale: '$29.99',
                 },
             ]
+        }
+    },
+    props:{
+        displayCount: {
+      type: Number,
+      default: 6
+    }
+    },
+    computed:{
+        filteredItems(){
+            return this.products.slice(0, this.displayCount);
         }
     }
 }

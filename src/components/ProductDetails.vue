@@ -19,7 +19,7 @@
                     <button :class="{ 'projectDetails__size-btn--active': activeSize === 'xl' }" @click="setActiveSize('xl')" class="projectDetails__size-btn">xl</button>
                     <button :class="{ 'projectDetails__size-btn--active': activeSize === 'xxl' }" @click="setActiveSize('xxl')" class="projectDetails__size-btn">xxl</button>
                 </div>
-                <router-link to="/cart" class="addCart" @click="addItemToCart">Add to cart</router-link>
+                <router-link to="/cart" class="addCart">Add to cart</router-link>
             </div>
         </div>
         <section class="projectDetails__description">
@@ -36,7 +36,7 @@
 <section class="projectDetails__product">
     <div class="center">
         <h2 class="projectDetails__product-title">Other Products</h2>
-        <ProductList  class="catalog__list" />
+        <ProductList  class="catalog__list" :products="products" displayCount="3"/>
     </div>
 </section>
     </div>
@@ -44,7 +44,7 @@
 
 <script>
 import ProductList from '@/components/ProductList.vue';
-import { mapActions } from 'vuex';
+
     export default {
         components:{ ProductList },
         data() {
@@ -56,15 +56,12 @@ import { mapActions } from 'vuex';
         setActiveSize(size) {
             this.activeSize = size;
         },
-        addItemToCart() {
-      const product = {
-        name: 'Lavazza Crema E Gusto',
-        price: 19.99
-      };
-      this.addToCart(product); // Вызываем действие addToCart из Vuex Store
-    },
-    ...mapActions(['addToCart']) // Используем mapActions для упрощения вызова действия из хранилища
-  }
+  },
+  computed:{
+        filteredItems(){
+            return this.products.slice(0, 3);
+        }
+    }
 }
 </script>
 

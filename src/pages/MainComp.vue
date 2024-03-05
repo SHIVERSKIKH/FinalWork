@@ -6,7 +6,7 @@
                 <h1 class="promo__title">{{ $t('promoTitle') }}</h1>
                 <p class="promo__txt">{{ $t('promoTxt') }}</p>
                 <div class="promo__btn">
-                    <router-link class="promo__btn-link" to="/">{{ $t('buyBtn') }}</router-link>
+                    <router-link class="promo__btn-link" to="/cart">{{ $t('buyBtn') }}</router-link>
                     <router-link class="promo__btn-link promo__btn-link--color" to="/productDetails">{{ $t('readBtn') }}</router-link>
                 </div>
             </div>
@@ -25,7 +25,7 @@
             </article>
             <section class="catalog">
                 <h2 class="catalog__title">Catalog</h2>
-                    <ProductList class="catalog__list" />
+                    <ProductList class="catalog__list"/>
             </section>
             <section class="news">
                 <h2 class="news__title">News</h2>
@@ -53,6 +53,9 @@ import ProductList from '@/components/ProductList.vue';
     export default {
         i18n,
         components:{ ProductList },
+        props: {
+            products:Object,
+        },
         computed:{
             ...mapState(['data', 'news', 'currentLanguage'])
         },
