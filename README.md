@@ -4,6 +4,19 @@
 ```
 npm install
 ```
+## Vuex setup
+```
+npm install vuex
+```
+## Router setup
+```
+npm install vue-router@next
+```
+
+## i18n setup
+```
+npm install vue-i18n 
+```
 
 ### Compiles and hot-reloads for development
 ```
