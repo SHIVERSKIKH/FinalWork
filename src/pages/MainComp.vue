@@ -3,12 +3,11 @@
     <section class="promo">
         <div class="center">
             <div class="promo__info">
-                <h1 class="promo__title">Roasted coffee best choice</h1>
-                <p class="promo__txt">The coffee is brewed by first roasting the green coffee beans over hot
-                                coals in a brazier. given an opportunity to sample.</p>
+                <h1 class="promo__title">{{ $t('promoTitle') }}</h1>
+                <p class="promo__txt">{{ $t('promoTxt') }}</p>
                 <div class="promo__btn">
-                    <router-link class="promo__btn-link" to="/">Buy now</router-link>
-                    <router-link class="promo__btn-link promo__btn-link--color" to="/productDetails">Read more</router-link>
+                    <router-link class="promo__btn-link" to="/">{{ $t('buyBtn') }}</router-link>
+                    <router-link class="promo__btn-link promo__btn-link--color" to="/productDetails">{{ $t('readBtn') }}</router-link>
                 </div>
             </div>
         </div>
@@ -17,11 +16,11 @@
         <div class="center">
             <article class="article">
                 <div class="article__img-wrp">
-                    <img src="@/assets/img/article1.jpg" alt="" class="article__img">
+                    <img :src="data.image" alt="" class="article__img">
                 </div>
                 <div class="article__info">
-                    <h2 class="article__title">Roasted Coffee</h2>
-                    <p class="article__txt">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+                    <h2 class="article__title">{{  data.name }}</h2>
+                    <p class="article__txt">{{ data.description }}</p>
                 </div>
             </article>
             <section class="catalog">
@@ -48,17 +47,21 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+ import { mapState, mapMutations } from 'vuex';
+import i18n from '@/i18n';
 import ProductList from '@/components/ProductList.vue';
     export default {
+        i18n,
         components:{ ProductList },
         computed:{
-            ...mapState(['data', 'news'])
+            ...mapState(['data', 'news', 'currentLanguage'])
         },
-            mounted() {
-        console.log('Data:', this.data);
-        console.log('News:', this.news);
-    }
+        methods: {
+            ...mapMutations(['setLanguage']),
+      changeLanguage(lang) {
+        this.setLanguage(lang);
+      },
+        },
     }
 </script>
 
