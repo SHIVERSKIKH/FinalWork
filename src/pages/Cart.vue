@@ -29,9 +29,9 @@
                 <h3 class="cart__item__title">Lavazza Crema E Gusto</h3>
                 <p class="cart__item-txt">xl</p>
                 <select class="cart__item-select">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
+                    <option class="option" value="1">1</option>
+                    <option class="option" value="2">2</option>
+                    <option class="option" value="3">3</option>
                 </select>
             </div>
         </div>

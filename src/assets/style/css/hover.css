@@ -31,4 +31,7 @@ a:hover, button:hover {
     .projectDetails__size-btn:hover {
         border:2px solid #C7A17A;
     }
+    .catalog__favorite:hover {
+        cursor:pointer;
+    }
 }
