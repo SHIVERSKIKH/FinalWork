@@ -1,6 +1,6 @@
 # final-work
 ## Сайт доступен по ссылки:
-https://final-work-8f8x1760i-shiverskikhs-projects.vercel.app/
+https://final-work-lac.vercel.app/
 
 ## Project setup
 ```
