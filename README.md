@@ -1,5 +1,5 @@
 # final-work
-## Сайт доступен по ссылки:
+## Сайт доступен по ссылке:
 https://final-work-lac.vercel.app/
 
 ## Project setup
