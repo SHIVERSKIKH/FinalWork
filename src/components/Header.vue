@@ -67,7 +67,7 @@
             <div class="nav__user">
               <ul class="nav__user-list">
                 <li class="nav__user-item">
-                  <router-link class="nav__user-us" to="/"></router-link>
+                  <router-link class="nav__user-us" to="/"><span class="favorite-span">{{ favoriteCount }}</span></router-link>
                 </li>
                 <li class="nav__user-item">
                   <router-link class="nav__user-favor" to="/"></router-link>
