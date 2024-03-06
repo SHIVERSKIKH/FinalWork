@@ -14,26 +14,32 @@
 </template>
 
 <script>
+import { mapMutations, mapState } from 'vuex';
     export default {
         props: {
             product:Object,
     },
         data() {
         return {
-            isFavorite: false,
-            favoriteCount:0,
+            isFavoriteLike: false,
         };
     },
     computed: {
         favoriteBackground() {
-            return this.isFavorite ? 'url(' + require('@/assets/img/like.png') + ')' : 'url(' + require('@/assets/img/favorite1.png') + ')';
-        }
+            return this.isFavoriteLike ? 'url(' + require('@/assets/img/like.png') + ')' : 'url(' + require('@/assets/img/favorite1.png') + ')';        
+        },
+        ...mapState(['isFavorite', 'favoriteCount'])
     },
     methods: {
         toggleFavorite() {
-            this.isFavorite = !this.isFavorite;
-            this.favoriteCount += this.isFavorite ? 1 : -1;
-        }
+            this.isFavoriteLike = !this.isFavoriteLike;
+            if(this.isFavoriteLike) {
+                this.incrementFavoriteCount();
+            }else {
+                this.decrementFavorite();
+            }
+        },
+        ...mapMutations(['incrementFavoriteCount', 'decrementFavorite'])
     }
     }
    
