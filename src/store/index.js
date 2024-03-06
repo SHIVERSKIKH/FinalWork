@@ -34,6 +34,8 @@ export default createStore({
             image:article3,
         },
 ],
+favoriteCount:0,
+isFavorite:false,
 cartItems:[],
 currentLanguage: 'en',
     },
@@ -47,12 +49,17 @@ currentLanguage: 'en',
         setLanguage(state, lang) {
             state.currentLanguage = lang;
             i18n.global.locale = lang;
+        },
+        incrementFavoriteCount(state) {
+            state.favoriteCount++;
+            state.isFavorite = true;
+        },
+        decrementFavorite(state) {
+            state.favoriteCount--;
+            state.isFavorite = false;
         }
     },
     actions:{
-        addToCart({ commit }, product) {
-            commit('addToCart', product);
-          },
           setLanguage({ commit }, lang) {
             commit('setLanguage', lang);
         }

@@ -35,7 +35,7 @@
                   <router-link class="nav__user-us" to="/"></router-link>
                 </li>
                 <li class="nav__user-item">
-                  <router-link class="nav__user-favor" to="/"><span class="favorite-span"></span></router-link>
+                  <router-link class="nav__user-favor" to="/"><span class="favorite-span">{{ favoriteCount }}</span></router-link>
                 </li>
                 <li class="nav__user-item">
                   <router-link class="nav__user-cart" to="/"></router-link>
@@ -117,7 +117,7 @@
     },
     },
     computed: {
-      ...mapState(['currentLanguage'])
+      ...mapState(['currentLanguage', 'favoriteCount'])
     }
   };
   </script>
